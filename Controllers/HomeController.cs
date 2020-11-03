@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CVGenerator.Models;
+using CVGenerator.ViewModels;
 
 namespace CVGenerator.Controllers
 {
@@ -23,9 +24,11 @@ namespace CVGenerator.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        
+
+        public IActionResult MyCV(CVViewModel model)
         {
-            return View();
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

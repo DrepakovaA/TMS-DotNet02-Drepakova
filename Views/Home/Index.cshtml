@@ -1,8 +1,45 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model CVGenerator.ViewModels.CVViewModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV generator</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+</head>
+
+<body>
+    <h1>CV GENERATOR</h1>
+    <form asp-controller="Home" asp-action="MyCV">
+        <div class="section-input">
+            <label class="form-text">Enter full name</label>
+            <input asp-for="Name" type="text" class="input-field">
+        </div>
+
+        <div class="section-input">
+            <label class="form-text">Email</label>
+            <input type="email" class="input-field">
+        </div>
+
+        <div class="section-input">
+            <label class="form-text">Birth date</label>
+            <input type="date" class="input-field">
+        </div>
+
+        <div class="section-input">
+            <label class="form-text">Previous job position</label>
+            <input type="text" class="input-field">
+        </div>
+
+        <div class="section-input">
+            <button type="submit" class="button">Sign up</button>
+            
+        </div>
+    </form>
+    
+
+</body>
+
+</html>
